@@ -20,6 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     # When we go into /polls anything, it will look into the polls.urls here and
     # see what we are actually talking about displaying to user.
+    path("", include("pages.urls")),
     path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls),
 ]
